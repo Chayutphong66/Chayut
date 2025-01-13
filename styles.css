@@ -1,0 +1,160 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: 'Noto Serif Thai', sans-serif ;
+}
+
+/*Front*/
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* เมนู Tabs */
+nav {
+    background-color: #4CAF50;
+    overflow: hidden;
+}
+
+nav .tabs {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav .tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav .tab:hover, 
+nav .tab.active {
+    background-color: #3e8e41;
+}
+
+/* Layout */
+main {
+    padding: 20px;
+}
+
+.content-item {
+    position: relative;
+    left: 15%;
+    height: 800px;
+    width: 70%;
+    margin-bottom: 30px;
+    border: 1px solid #070505;
+    border-radius: 10px;
+    background: rgb(255, 254, 254);
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-content img {
+    justify-self: center;
+    width: 100%;
+    height: 650px;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+/*ใส่ชื่อสถานที่*/
+.place-name {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+.content-item img:hover {
+    filter: brightness(50%);
+    transform: scale(1.05);
+}
+.image-content:hover .place-name {
+    opacity: 1;
+}
+
+.content-item h2 {
+    text-decoration: none;
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+
+
+.content-item p {
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+/* Section Map */
+section.map iframe {
+    border: 0;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* ปุ่มกลับหน้าแรก */
+.back-button {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #3e8e41;
+}
+
+/* ซ่อนหมวดหมู่ที่ไม่ active */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.content-info{
+    padding: 50px 20px;
+    width: 80%;
+    margin: auto;
+    height: auto;
+    background: rgb(255, 255, 255);
+    filter: brightness(85%);
+    border-radius: 10px;
+}
